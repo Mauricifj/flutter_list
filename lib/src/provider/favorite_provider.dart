@@ -1,4 +1,3 @@
-// Busca lista (mock API)
 import 'package:flutter_list/src/provider/shared_preferences_provider.dart';
 import 'package:riverpod/riverpod.dart';
 import 'package:shared_preferences/shared_preferences.dart';

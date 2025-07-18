@@ -35,10 +35,8 @@ class ItemsPage extends ConsumerWidget {
       ),
       body: itemsAsync.when(
         data: (items) => ListView.builder(
-          // otimização
           itemCount: items.length,
           itemBuilder: (_, i) => ProviderScope(
-            // isola rebuild
             overrides: [currentItem.overrideWithValue(items[i])],
             child: const ItemTile(),
           ),
