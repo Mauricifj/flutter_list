@@ -15,7 +15,17 @@ class ItemsPage extends ConsumerWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text('Items'),
-        actions: [Badge(label: Text(favCount.toString()))],
+        actions: [
+          if (favCount > 0)
+            Padding(
+              padding: const EdgeInsets.all(8.0),
+              child: Badge(
+                alignment: Alignment.bottomRight,
+                label: Text(favCount.toString()),
+                child: const Icon(Icons.star),
+              ),
+            ),
+        ],
         bottom: PreferredSize(
           preferredSize: const Size.fromHeight(56),
           child: Padding(

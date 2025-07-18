@@ -6,6 +6,6 @@ class FlutterListApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(home: ItemsPage());
+    return MaterialApp(debugShowCheckedModeBanner: false, home: ItemsPage());
   }
 }
